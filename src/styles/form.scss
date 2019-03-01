@@ -1,0 +1,62 @@
+@import './variables.scss';
+
+
+// Checkbox
+
+.checkbox {
+    display: block;
+    margin: 0 0.2em;
+    cursor: pointer;
+    padding: 0.2em;
+
+    &:before {
+        content: "\2714";
+        border: 0.1em solid #000;
+        border-radius: 0.2em;
+        display: inline-block;
+        width: 1.2em;
+        height: 1.2em;
+        padding-left: 0;
+        padding-bottom: 0.3em;
+        margin-right: 0.2em;
+        vertical-align: baseline;
+        color: transparent;
+        transition: .2s;
+        line-height: 1;
+        text-align: center;
+    }
+
+    &--checked {
+        &:before {
+            background-color: darken($green, 20%);
+            border-color: transparent;
+            color: #fff;
+        }
+    }
+
+    &--disabled {
+        &:before {
+            border-color: #aaa;
+        }
+
+        &.checkbox {
+            &--checked {
+                &:before {
+                    background-color: lighten($green, 10%);
+                    border-color: lighten($green, 10%);
+                }
+            }
+        }
+       
+    }
+
+}
+
+
+// Multiselect overwrites (semantic ui)
+.rw-multiselect {
+    .rw-input-reset {
+        border-width: 0 !important;
+        width: auto !important;
+    }
+}

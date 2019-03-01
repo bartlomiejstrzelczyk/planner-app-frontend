@@ -1,0 +1,120 @@
+@import './variables.scss';
+@import './utils.scss';
+@import './buttons.scss';
+@import './form.scss';
+
+html {
+  font-size: 100%;
+}
+
+html, body, .app-container, #root {
+  height: 100%;
+  max-height: 100%;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  background: $white;
+}
+
+*, button {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.app-container {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 15px 0;
+}
+
+.header {
+  padding: 15px 0;
+  box-shadow: 0px 3px 10px transparentize($dark, 0.65);
+
+  &__links {
+    width: 80%;
+    margin: auto;
+    max-width: 1280px;
+
+    a {
+      text-decoration: none;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+// List
+
+.list {
+  & > * {
+    margin: 15px 0;
+  }
+}
+
+
+// TODOS
+
+.item {
+  display: flex;
+  width: 100%;
+  border: 2px solid $dark;
+  border-radius: 6px;
+  padding: 20px;
+
+  &__title {
+    margin-left: -10px;
+    flex-grow: 1;
+    font-size: 1.4rem;
+    
+    i {
+      height: auto;
+    }
+  }
+
+  &__second-row {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  &__description {
+    flex-grow: 1;
+  }
+
+  &__categories {
+    margin-top: 15px;
+
+    > * {
+      margin-right: 15px;
+    }
+  }
+
+}
+
+.pill {
+  display: block;
+  padding: 10px 15px;
+  line-height: 1;
+  border-radius: 25px;
+  text-decoration: none;
+  background: $dark;
+  color: $white;
+  font-size: 1rem;
+  border-style: none;
+}

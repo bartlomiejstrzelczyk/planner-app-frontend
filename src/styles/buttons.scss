@@ -1,0 +1,54 @@
+@import './variables.scss';
+
+.buttons-row {
+    .btn {
+        margin-right: 10px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: $green;
+    border-style: none;
+    border-radius: 5px;
+    line-height: 1;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    color: #232323;
+    font-size: 1rem;
+    text-transform: capitalize;
+
+    &:hover, &:focus {
+       background: lighten($green, 10%);
+    }
+
+    &--edit {
+        background: $yellow;
+
+        &:hover, &:focus {
+            background: lighten($yellow, 10%);
+        }
+    }
+
+    &--danger {
+        background: $red;
+        
+
+        &:hover, &:focus {
+            background: lighten($red, 10%);
+        }
+    }
+
+    &--icon-only {
+        padding: 15px 20px;
+        border-radius: 25px;
+        font-size: 18px;
+    }
+
+}
